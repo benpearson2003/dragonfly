@@ -204,4 +204,18 @@ gameArea.addEventListener( "mouseup", function ( e ) {
     }
 } );
 
+// Start flapping with touchstart
+gameArea.addEventListener( "touchstart", function ( e ) {
+    if ( playing ) {
+    flapping = true;
+    }
+} );
+
+// stop flapping with touchend
+gameArea.addEventListener( "touchend", function ( e ) {
+    if ( playing ) {
+    flapping = false;
+    }
+} );
+
 restart();
